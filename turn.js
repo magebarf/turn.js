@@ -394,7 +394,7 @@ turnMethods = {
 
 				// Remove element from the DOM
 				if (data.pageObjs[page])
-					data.pageObjs[page].remove();
+					data.pageObjs[page].detach();
 
 			}
 
@@ -531,12 +531,12 @@ turnMethods = {
 			var dd = data.pages[page].data();
 			if (dd.f && dd.f.fwrapper)
 				dd.f.fwrapper.remove();
-			data.pages[page].remove();
+			data.pages[page].detach();
 			delete data.pages[page];
 		}
 
 		if (data.pageObjs[page])
-			data.pageObjs[page].remove();
+			data.pageObjs[page].detach();
 
 		if (data.pageWrap[page]) {
 			data.pageWrap[page].remove();
